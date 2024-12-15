@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My New Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* পটভূমির রঙ */
+        }
+
+        .header-image{
+
+width:100%;
+            height:250px;
+
+
+        }
+        header,footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #7A7C7D; /* সাদা পটভূমি */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* হালকা ছায়া */
+        }
+        h1 {
+            margin: 0; /* মার্জিন 0 করা হয়েছে */
+        }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  font-size:17px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #01CF49;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+        
+        .scrolling-ad {
+            background-color: lightgray;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .scrolling-text {
+            display: inline-block;
+            white-space: nowrap; /* স্ক্রলিং টেক্সট এক লাইনে থাকবে */
+            animation: scroll 10s linear infinite; /* স্ক্রলিং অ্যানিমেশন */
+        }
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .new-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .new-left-panel{
+            width: 30%; /* দুটি প্যানেলের জন্য প্রস্থ */
+            padding: 10px;
+            border: 1px solid #ccc; /* সীমানা */
+            border-radius: 5px; /* কোণ গোলাকার */
+            background-color:gray; /* সাদা পটভূমি */
+        }
+.new-right-panel{
+            width: 70%; /* দুটি প্যানেলের জন্য প্রস্থ */
+            padding: 10px;
+            border: 1px solid #ccc; /* সীমানা */
+            border-radius: 5px; /* কোণ গোলাকার */
+            background-color:#42AFFF; /* green পটভূমি */
+        }
+
+
+
+        footer {
+            background-color: #f1f1f1; /* হালকা পটভূমি */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* উপরে হালকা ছায়া */
+        }
+ /* উপরে হালকা ছায়া */
+
+        #image{
+
+            border-radius: 5px;
+            width:133px;
+            height:133px;
+        }
+
+        
+    </style>
+    
+    <script>
+        function redirectToDesktopSite() {
+            // মোবাইল ডিভাইস চেক
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                // মোবাইল হলে ডেস্কটপ সাইটে রিডাইরেক্ট করুন
+                window.location.href = "https://sarderr.github.io/sdf/";
+            }
+        }
+        window.onload = redirectToDesktopSite; // পেজ লোড হলে রিডাইরেক্ট হবে
+    </script>
+</head>
+<body>
+    <img src="vill.jpg" class="header-image" alt="Header Image">
+
+    <header class="head">
+        <h1>Welcome to My New Website</h1>
+    </header>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+    <li><a href="aba.html">About</a></li>
+  <li><a href="img.html">Image</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="ser.html">Servise</a></li>
+  <li><a href="skill.html">Works</a></li>
+</ul>
+
+
+    
+    <!-- স্ক্রলিং বিজ্ঞাপন শুরু -->
+    <div class="scrolling-ad">
+        <div class="scrolling-text">
+            Welcome to my new website. I will customize it later. Stay tuned for updates!
+        </div>
+    </div>
+    <!-- স্ক্রলিং বিজ্ঞাপন শেষ -->
+
+
+    
+
+    <div class="new-container">
+        <div class="new-left-panel">
+            <h2><img id="image" src="image.jpg" alt="বিবরণ" /></h2>
+            <p>I am a good person</p>
+        </div>
+        <div class="new-right-panel">
+            <div class="right">
+                <!-- এখানে আপনার ডিপের কন্টেন্ট যুক্ত করুন -->
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <p>&copy; MD. SELIM SARDER 2024</p>
+    </footer>
+
+    <script>
+        // Check for browser support
+        if (typeof document.addEventListener === 'undefined') {
+            alert("Your browser does not support modern JavaScript features. Please upgrade.");
+        }
+
+        // Simple alert button functionality
+        // Uncomment the following lines if you have a button with id 'alertButton'
+        // document.getElementById('alertButton').addEventListener('click', function() {
+        //     alert('Button clicked!');
+        // });
+    </script>
+</body>
+</html>
